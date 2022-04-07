@@ -1,3 +1,4 @@
+
 base_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
 changed_list = []
 for idx, item in enumerate(base_list):
