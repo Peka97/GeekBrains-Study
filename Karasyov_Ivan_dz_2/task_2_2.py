@@ -1,6 +1,7 @@
+# Задание 2
 
 base_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
-changed_list = []
+changed_list = []  # Вариант решения с созданием списка
 for idx, item in enumerate(base_list):
     if item.isdigit():
         changed_list.append(f'"{int(item):02d}"')
