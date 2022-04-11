@@ -1,14 +1,12 @@
-name_dict = {
 
-}
+name_dict = {}
 
 
 def thesaurus(names: list):
     for name in names:
         letter = name[0]
         if name_dict.get(letter):
-            new = {letter: [*name_dict.get(letter), name]}
-            name_dict.update(new)
+            name_dict.update({letter: [*name_dict.get(letter), name]})
         else:
             name_dict.setdefault(letter, letter)
             name_dict[letter] = [name]
