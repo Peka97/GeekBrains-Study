@@ -8,7 +8,6 @@ def thesaurus(names: list):
         if name_dict.get(letter):
             name_dict.update({letter: [*name_dict.get(letter), name]})
         else:
-            name_dict.setdefault(letter, letter)
             name_dict[letter] = [name]
 
 
