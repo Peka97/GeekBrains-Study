@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a27b1ae2-8f93-4d59-a639-cedc5db233ed" name="Changes" comment="Complete 5/5 tasks. Upd common files">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a27b1ae2-8f93-4d59-a639-cedc5db233ed" name="Changes" comment="Complete 5/5 tasks. Upd common files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,6 +174,7 @@
       <workItem from="1649602778005" duration="1711000" />
       <workItem from="1649604541513" duration="55000" />
       <workItem from="1649665174946" duration="16823000" />
+      <workItem from="1649968254037" duration="42000" />
     </task>
     <task id="LOCAL-00001" summary="Complete 1/5 tasks">
       <created>1649604592474</created>
