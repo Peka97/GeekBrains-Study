@@ -11,7 +11,7 @@ def get_values():
     for txt in response.text.split():
         if txt.startswith("Date"):
             date = txt.strip('"Date"= "').split('.')
-            date_new = datetime(year=int(date[2]), month=int(date[1]), day=int(date[0]))
+            date_new = datetime(year=int(date[2]), month=int(date[1]), day=int(date[0])).date()
             print(date_new)
             print(type(date_new))  # Проверка класса
     for txt in response.text.split("<CharCode>"):
