@@ -1,8 +1,5 @@
-import sys
-
-
 def data_users_v3(argv):
-	users_filename, hobby_filename, result_file_filename = argv
+	users_filename, hobby_filename, result_file_filename = argv[1:]
 	result = []
 	with open(f'{users_filename}', 'r', encoding='utf-8') as users:
 		with open(f'{hobby_filename}', 'r', encoding='utf-8') as hobby:
@@ -27,5 +24,6 @@ def data_users_v3(argv):
 
 
 if __name__ == '__main__':
-	exit(data_users_v3(sys.argv))
+	import sys
 
+	exit(data_users_v3(sys.argv))
