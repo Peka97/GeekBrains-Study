@@ -19,10 +19,10 @@ def find_top_3_1(collection: dict) -> list:
     """Функция для нахождения топ 3 компаний по прибыли.
     Сложность: O(n**2)"""
 
-    result = list()                            # O(1)
+    result = list()                            # O(n)
     max_name, max_val = str(), 0               # O(1)
     collection = collection.copy()             # O(1)
-    while len(result) < 3:                     # O(n)
+    while len(result) < 3:                     # O(3)
         for name, val in collection.items():   # O(n)
             if val > max_val:                  # O(1)
                 max_name, max_val = name, val  # O(1)
@@ -36,7 +36,7 @@ def find_top_3_2(collection: dict) -> list:
     """Функция для нахождения топ 3 компаний по прибыли.
     Сложность: O(n log n)"""
 
-    result = list()                                               # O(1)
+    result = list()                                               # O(n)
     top_3_values = sorted(collection.values(), reverse=True)[:3]  # O(n log n)
     for name, val in dct.items():                                 # O(n)
         if len(result) < 3 and val in top_3_values:               # O(1)
