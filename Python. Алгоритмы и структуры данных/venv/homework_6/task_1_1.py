@@ -27,12 +27,12 @@ from memory_profiler import profile, memory_usage
 
 
 def usage(func):
-
     def wrapper(*args, **kwargs):
-        point = memory_usage()[0]
-        func(*args, **kwargs)
-        return memory_usage()[0] - point
-
+        m1 = memory_usage()
+        res = func(*args)
+        m2 = memory_usage()
+        mem_diff = m2[0] - m1[0]
+        return mem_diff
     return wrapper
 
 

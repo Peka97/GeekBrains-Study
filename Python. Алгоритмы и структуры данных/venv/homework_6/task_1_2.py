@@ -23,7 +23,17 @@
 Это файл для второго скрипта
 """
 from timeit import timeit
-from task_1_1 import usage
+from memory_profiler import memory_usage
+
+
+def usage(func):
+    def wrapper(*args, **kwargs):
+        m1 = memory_usage()
+        res = func(*args)
+        m2 = memory_usage()
+        mem_diff = m2[0] - m1[0]
+        return mem_diff
+    return wrapper
 
 
 @usage
@@ -58,8 +68,8 @@ def func_3(nums):
 
 
 if __name__ == '__main__':
-    print(func_1(range(10000)))  # -> 0.2734375
-    print(func_2(range(10000)))  # -> 0.20703125
+    print(func_1(range(10000)))  # -> 0.26171875
+    print(func_2(range(10000)))  # -> 0.234375
     print(func_3(range(10000)))  # -> 0.00390625
 
     # Аналитика:
