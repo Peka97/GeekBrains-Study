@@ -54,7 +54,7 @@ if __name__ == '__main__':
     print(lst)  # Исходный массив
     print(bubble_sort(lst[:]))  # Отсортированный массив
 
-    print(timeit('bubble_sort(lst[:])', globals=globals(), number=1000))  # -> 2.4511985999997705
+    print(timeit('bubble_sort(lst[:])', globals=globals(), number=1000))    # -> 2.4511985999997705
     print(timeit('bubble_sort_2(lst[:])', globals=globals(), number=1000))  # -> 2.07941160001792
 
     """
