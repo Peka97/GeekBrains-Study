@@ -111,8 +111,6 @@ def calc_2():
 
 
 if __name__ == '__main__':
-
-
     mem_diff = calc()
     print(f"Выполнение заняло {mem_diff} Mib")
 
