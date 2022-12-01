@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open 4.html",
-            "file": "d:\\GitHub\\GB\\GB\\.vscode\\JavaScript\\homework_1\\4.html"
+            "name": "Open 6.html",
+            "file": "d:\\GitHub\\GB\\JS Homework\\.vscode\\JavaScript\\homework_2\\6.html"
         }
     ]
 }
