@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+
+<body>
+  <!--
+Необязательное задание.
+
+Необходимо создать функцию getDigitsOfNumber, которая принимает целое
+положительное число в диапазоне от 0 до 1000.
+Функция должна вернуть обычный объект с тремя свойствами:
+1. units - содержит число, количество единиц в параметре функции.
+2. dozens - содержит число, количество десятков в параметре функции.
+3. hundreds - содержит число, количество сотен в параметре функции.
+Если функции было передано не целое положительное число, либо число в ином
+диапазоне, нежели задано в условии, функция должна вывести в консоль информацию
+об ошибке и вернуть пустой объект.
+Необходимо также прописать jsdoc для данной функции.
+
+Подсказка:
+У объекта console есть разные методы, мы часто используем console.log для того
+чтобы вывести в консоль какое-то значение, однако есть и другие методы, найдите
+в интернете какие методы существуют и используйте "правильный метод" в нужном
+месте. Обратите внимание что функция не должна выбрасывать ошибку, она должна
+только вывести в консоль информацию о том, что что-то пошло не так.
+Обратите внимание на слова "от 0 до 1000", это означает диапазон [0, 999], что
+можно прочитать как "от нуля до 999 включительно".
+-->
+  <script>
+    "use strict";
+
+
+    /**
+     * Функция, возвращающая количество единиц в числе.
+     * @param {number} num Целое число.
+     * @return {number} Количество единиц в числе.
+     */
+    function getUnits(num) {
+      return Math.floor(num % 10);
+    }
+
+    /**
+     * Функция, возвращающая количество десятков в числе.
+     * @param {number} num Целое число.
+     * @return {number} Количество десятков в числе.
+     */
+    function getDozen(num) {
+      return Math.floor(num / 10 % 10);
+    }
+
+    /**
+     * Функция, возвращающая количество сотен в числе.
+     * @param {number} num Целое число.
+     * @return {number} Количество сотен в числе.
+     */
+    function getHundreds(num) {
+      return Math.floor(num / 100 % 10);
+    }
+
+    /**
+     * @class Создание числа как объекта.
+     * @param {number} number Целое число от 0 до 1000.
+     */
+    function getDigitsOfNumber(number) {
+      if (Number.isInteger(number) && -1 < number && number < 1000) {
+        this.units = getUnits(number);
+        this.dozen = getDozen(number);
+        this.hundreds = getHundreds(number);
+      } else {
+        console.warn(`WRONG NUMBER: ${number}. Empty object created.`);
+        return {};
+      }
+    }
+
+    // Проверяем:
+    const n1 = new getDigitsOfNumber(438);
+    console.log(n1)
+    console.log(n1.units);
+    console.log(n1.dozen);
+    console.log(n1.hundreds);
+
+    // Предупреждения:
+    const n2 = new getDigitsOfNumber(-59);
+    console.log(n2);
+    const n3 = new getDigitsOfNumber(3214);
+    console.log(n3);
+    const n4 = new getDigitsOfNumber(50.5);
+    console.log(n4);
+  </script>
+</body>
+
+</html>
