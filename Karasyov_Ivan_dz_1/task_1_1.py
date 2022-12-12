@@ -34,4 +34,3 @@ while True:
         elif 1 < seconds < 5 or 1 < seconds % 10 < 5:
             reply += f" {seconds} секунды"
     print(reply)
-
